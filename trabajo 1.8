@@ -1,0 +1,13 @@
+# Solicitar al usuario sus ingresos mensuales y sus gastos mensuales por alimentación
+ingresos_mensuales = float(input("Ingrese sus ingresos mensuales: "))
+gastos_alimentacion = float(input("Ingrese sus gastos mensuales por alimentación: "))
+
+# Calcular el porcentaje de gastos por alimentación
+porcentaje_alimentacion = (gastos_alimentacion / ingresos_mensuales) * 100
+
+# Calcular el porcentaje disponible para otros rubros
+porcentaje_disponible = 100 - porcentaje_alimentacion
+
+# Mostrar los resultados
+print("El porcentaje de gastos por alimentación es:", porcentaje_alimentacion, "%")
+print("El porcentaje disponible para otros rubros es:", porcentaje_disponible, "%")
