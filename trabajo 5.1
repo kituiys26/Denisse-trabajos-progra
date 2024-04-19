@@ -1,0 +1,18 @@
+# Definir un arreglo bidimensional para almacenar las calificaciones
+calificaciones = [
+    [85, 90, 88, 92],  # Calificaciones del alumno 1 en cada asignatura
+    [78, 85, 80, 88],  # Calificaciones del alumno 2 en cada asignatura
+    [90, 92, 85, 88]   # Calificaciones del alumno 3 en cada asignatura
+]
+
+# Calcular el promedio de calificaciones de cada alumno
+for i in range(len(calificaciones)):
+    promedio_alumno = sum(calificaciones[i]) / len(calificaciones[i])
+    print("El promedio de calificaciones del alumno", i + 1, "es:", promedio_alumno)
+
+# Calcular el promedio de calificaciones en cada asignatura
+for j in range(len(calificaciones[0])):
+    calificaciones_asignatura = [fila[j] for fila in calificaciones]
+    promedio_asignatura = sum(calificaciones_asignatura) / len(calificaciones_asignatura)
+    print("El promedio de calificaciones en la asignatura", j + 1, "es:", promedio_asignatura)
+
