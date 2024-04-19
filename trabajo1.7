@@ -1,0 +1,22 @@
+# Solicitar al usuario la cantidad de horas semanales trabajadas y el precio por hora
+horas_semanales = float(input("Ingrese la cantidad de horas semanales trabajadas: "))
+precio_por_hora = float(input("Ingrese el precio que se le paga por hora: "))
+
+# Calcular el salario semanal
+salario_semanal = horas_semanales * precio_por_hora
+
+# Calcular el salario mensual multiplicando el salario semanal por 4.2 semanas
+salario_mensual = salario_semanal * 4.2
+
+# Calcular las deducciones por cargas sociales y asociación solidarista
+deduccion_cargas_sociales = salario_mensual * 0.105
+deduccion_asociacion_solidarista = salario_mensual * 0.05
+
+# Calcular el salario neto restando las deducciones del salario mensual
+salario_neto = salario_mensual - deduccion_cargas_sociales - deduccion_asociacion_solidarista
+
+# Mostrar el salario mensual y el salario neto
+print("El salario mensual es:", salario_mensual)
+print("Las deducciones por cargas sociales son:", deduccion_cargas_sociales)
+print("Las deducciones por asociación solidarista son:", deduccion_asociacion_solidarista)
+print("El salario neto es:", salario_neto)
