@@ -1,0 +1,20 @@
+# Solicitar al usuario que ingrese la distancia de casa a la universidad en kilómetros
+distancia = float(input("Ingrese la distancia de su casa a la universidad en kilómetros: "))
+
+# Solicitar al usuario que ingrese el costo por kilómetro
+costo_por_kilometro = float(input("Ingrese el costo por kilómetro: "))
+
+# Solicitar al usuario que ingrese la cantidad de días a la semana que viaja a la universidad
+dias_por_semana = int(input("Ingrese la cantidad de días a la semana que viaja a la universidad: "))
+
+# Calcular el costo de ida y vuelta diario
+costo_diario = 2 * distancia * costo_por_kilometro
+
+# Calcular el costo semanal multiplicando el costo diario por la cantidad de días a la semana
+costo_semanal = costo_diario * dias_por_semana
+
+# Calcular el costo total por cuatrimestre multiplicando el costo semanal por 15 semanas
+costo_total = costo_semanal * 15
+
+# Mostrar el costo total de trasladarse por cuatrimestre
+print("El costo total de trasladarse por cuatrimestre es:", costo_total)
