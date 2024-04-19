@@ -1,0 +1,8 @@
+# Solicitar al usuario que ingrese su año de nacimiento
+anio_nacimiento = int(input("Ingrese su año de nacimiento: "))
+
+# Determinar si el año de nacimiento es bisiesto
+if (anio_nacimiento % 4 == 0 and anio_nacimiento % 100 != 0) or (anio_nacimiento % 400 == 0):
+    print("¡Su año de nacimiento es en un año bisiesto!")
+else:
+    print("Su año de nacimiento no es en un año bisiesto.")
