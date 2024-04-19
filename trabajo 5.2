@@ -1,0 +1,29 @@
+# Inicializar los espacios disponibles con valor 0
+espacios_disponibles = [0] * 20
+
+# Solicitar al usuario que reserve un espacio
+while True:
+    posicion = int(input("Ingrese la posición que desea reservar (1-20), o ingrese 0 para salir: "))
+    
+    if posicion == 0:
+        break
+    
+    # Verificar si la posición está dentro del rango válido
+    if posicion < 1 or posicion > 20:
+        print("Posición inválida. Por favor, ingrese una posición válida.")
+        continue
+    
+    # Verificar si el espacio ya está reservado o vendido
+    if espacios_disponibles[posicion - 1] != 0:
+        print("El espacio ya está reservado o vendido. Por favor, elija otra posición.")
+        continue
+    
+    # Reservar el espacio asignando -1 a la posición
+    espacios_disponibles[posicion - 1] = -1
+    print("Espacio reservado con éxito en la posición", posicion)
+
+# Mostrar los espacios reservados
+print("\nEspacios reservados:")
+for i in range(len(espacios_disponibles)):
+    if espacios_disponibles[i] == -1:
+        print("Espacio", i + 1)
