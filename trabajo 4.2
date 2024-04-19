@@ -1,0 +1,29 @@
+# Inicializar variables
+nota_mayor = float('-inf')
+nota_menor = float('inf')
+cantidad_aprobados = 0
+cantidad_reprobados = 0
+
+# Bucle para ingresar las notas de los alumnos
+while True:
+    nota = float(input("Ingrese la nota del alumno (o ingrese -1 para terminar): "))
+    
+    # Verificar si se debe terminar el bucle
+    if nota == -1:
+        break
+    
+    # Actualizar la nota mayor y la nota menor
+    nota_mayor = max(nota_mayor, nota)
+    nota_menor = min(nota_menor, nota)
+    
+    # Verificar si el alumno aprobó o reprobó
+    if nota >= 70:
+        cantidad_aprobados += 1
+    else:
+        cantidad_reprobados += 1
+
+# Mostrar los resultados obtenidos
+print("La nota mayor es:", nota_mayor)
+print("La nota menor es:", nota_menor)
+print("Cantidad de aprobados:", cantidad_aprobados)
+print("Cantidad de reprobados:", cantidad_reprobados)
