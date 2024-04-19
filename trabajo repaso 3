@@ -1,0 +1,17 @@
+# Solicitar al usuario un valor
+valor = int(input("Ingrese un valor: "))
+
+# Inicializar una variable para contar cuántos números divisibles se han encontrado
+contador = 0
+
+# Inicializar una variable para almacenar el número a verificar
+numero = valor
+
+# Mostrar los primeros 10 números divisibles entre el valor ingresado
+print("Los primeros 10 números divisibles entre", valor, "son:")
+while contador < 10:
+    if numero % valor == 0:
+        print(numero)
+        contador += 1
+    numero += 1
+
