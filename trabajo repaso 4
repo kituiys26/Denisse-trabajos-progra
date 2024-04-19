@@ -1,0 +1,17 @@
+# Inicializar una lista para almacenar los salarios ingresados
+salarios = []
+
+# Capturar los 15 salarios ingresados por el usuario
+for i in range(15):
+    salario = float(input("Ingrese el salario {}: ".format(i + 1)))
+    salarios.append(salario)
+
+# Calcular cuánto dinero adicional se necesita para que al menos todos ganen $500
+dinero_necesario = 0
+for salario in salarios:
+    if salario < 500:
+        diferencia = 500 - salario
+        dinero_necesario += diferencia
+
+# Mostrar la cantidad total de dinero necesaria
+print("Para que al menos todos ganen $500, se necesita un total de ${} adicionales.".format(dinero_necesario))
