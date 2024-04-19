@@ -1,0 +1,12 @@
+# Solicitar al usuario que ingrese los valores de A, B, C y D
+A = int(input("Ingrese el valor de A: "))
+B = int(input("Ingrese el valor de B: "))
+C = int(input("Ingrese el valor de C: "))
+D = int(input("Ingrese el valor de D: "))
+
+# Imprimir en orden inverso
+print("Los valores en orden inverso son:")
+print("D =", D)
+print("C =", C)
+print("B =", B)
+print("A =", A)
