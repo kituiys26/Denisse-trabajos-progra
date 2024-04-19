@@ -1,0 +1,29 @@
+# Inicializar variables para almacenar los tiempos de las vueltas y de los PITS
+tiempos_vueltas = []
+tiempos_pits = []
+
+# Capturar los tiempos de las vueltas
+print("Ingrese los tiempos de las vueltas:")
+for i in range(1, 11):
+    tiempo_vuelta = float(input("Tiempo de vuelta {} (en segundos): ".format(i)))
+    tiempos_vueltas.append(tiempo_vuelta)
+
+# Capturar los tiempos de los PITS
+print("\nIngrese los tiempos de los PITS:")
+for i in range(1, 11):
+    tiempo_pit = float(input("Tiempo de PITS {} (en segundos): ".format(i)))
+    tiempos_pits.append(tiempo_pit)
+
+# Calcular el tiempo promedio por vuelta
+tiempo_promedio_vuelta = sum(tiempos_vueltas) / len(tiempos_vueltas)
+
+# Calcular el tiempo promedio por PITS
+tiempo_promedio_pits = sum(tiempos_pits) / len(tiempos_pits)
+
+# Calcular el porcentaje del tiempo PITS respecto al tiempo de recorrido de una vuelta
+porcentaje_pits_vuelta = (tiempo_promedio_pits / tiempo_promedio_vuelta) * 100
+
+# Mostrar los resultados
+print("\nTiempo promedio por vuelta:", tiempo_promedio_vuelta, "segundos")
+print("Tiempo promedio por PITS:", tiempo_promedio_pits, "segundos")
+print("Porcentaje del tiempo PITS respecto al tiempo de recorrido de una vuelta:", porcentaje_pits_vuelta, "%")
