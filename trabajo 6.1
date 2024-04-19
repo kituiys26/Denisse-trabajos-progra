@@ -1,0 +1,48 @@
+import os
+
+# Función para agregar información de un estudiante
+def agregar_informacion():
+    nombre = input("Ingrese el nombre del estudiante: ")
+    grupo = input("Ingrese el número de grupo del estudiante: ")
+    calificacion = float(input("Ingrese la calificación del estudiante: "))
+
+    # Escribir la información en el archivo
+    with open("notas.txt", "a") as file:
+        file.write(f"{nombre},{grupo},{calificacion}\n")
+
+    print("Información agregada exitosamente.")
+
+# Función para mostrar la información de todos los estudiantes
+def mostrar_informacion():
+    try:
+        with open("notas.txt", "r") as file:
+            print("Nombre\tGrupo\tCalificación")
+            print("-----------------------------")
+            for linea in file:
+                nombre, grupo, calificacion = linea.strip().split(",")
+                print(f"{nombre}\t{grupo}\t{calificacion}")
+    except FileNotFoundError:
+        print("Aún no hay información registrada.")
+
+# Función principal del programa
+def main():
+    while True:
+        print("\nMenú:")
+        print("1. Agregar información")
+        print("2. Mostrar información")
+        print("3. Salir")
+
+        opcion = input("Seleccione una opción: ")
+
+        if opcion == "1":
+            agregar_informacion()
+        elif opcion == "2":
+            mostrar_informacion()
+        elif opcion == "3":
+            print("Saliendo del programa...")
+            break
+        else:
+            print("Opción no válida. Por favor, seleccione una opción válida.")
+
+if __name__ == "__main__":
+    main()
