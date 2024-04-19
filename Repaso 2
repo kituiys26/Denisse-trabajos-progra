@@ -1,0 +1,38 @@
+# Solicitar al usuario la cantidad de niños
+ninos = int(input("Ingrese la cantidad de niños en la escuela: "))
+
+# Inicializar variables para contabilizar las estaturas en cada rango
+menos_de_100 = 0
+entre_100_y_120 = 0
+entre_121_y_130 = 0
+entre_131_y_140 = 0
+mas_de_140 = 0
+suma_estaturas = 0
+
+# Capturar las estaturas de los niños y actualizar las variables de conteo y suma
+for i in range(ninos):
+    estatura = float(input("Ingrese la estatura del niño {} (en cm): ".format(i+1)))
+    suma_estaturas += estatura
+    
+    if estatura < 100:
+        menos_de_100 += 1
+    elif estatura >= 100 and estatura <= 120:
+        entre_100_y_120 += 1
+    elif estatura >= 121 and estatura <= 130:
+        entre_121_y_130 += 1
+    elif estatura >= 131 and estatura <= 140:
+        entre_131_y_140 += 1
+    else:
+        mas_de_140 += 1
+
+# Calcular el promedio de estaturas
+promedio_estaturas = suma_estaturas / ninos
+
+# Mostrar los resultados obtenidos
+print("\nEstadísticas de las estaturas de los niños:")
+print("Cantidad de niños que miden menos de 100 cm:", menos_de_100)
+print("Cantidad de niños que miden entre 100 y 120 cm:", entre_100_y_120)
+print("Cantidad de niños que miden entre 121 y 130 cm:", entre_121_y_130)
+print("Cantidad de niños que miden entre 131 y 140 cm:", entre_131_y_140)
+print("Cantidad de niños que miden más de 140 cm:", mas_de_140)
+print("Promedio de estaturas:", promedio_estaturas, "cm")
